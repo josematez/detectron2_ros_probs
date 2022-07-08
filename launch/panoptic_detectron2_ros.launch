@@ -1,0 +1,16 @@
+<launch>
+  <arg name="input" default="ViMantic/ToCNN" />
+  <arg name="detection_threshold" default="0.7" />
+  <arg name="config" default="$(find detectron2_ros_probs)/detectron2/configs/COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml" />
+  <!--<arg name="model" default="/home/matez/catkin_ws/src/third_party/detectron2_ros_probs/detectron2/weights/model_final_cafdb1.pkl" /> -->
+  <arg name="model" default="$(find detectron2_ros_probs)/detectron2/weights/model_final_cafdb1.pkl" />
+  <arg name="visualization" default="true" />
+
+  <node name="detectron2_ros"  pkg="detectron2_ros_probs" type="panoptic_detectron2_ros.py" output="screen" >
+    <param name="input" value="$(arg input)" />
+    <param name="detection_threshold" value="$(arg detection_threshold)" />
+    <param name="config" value="$(arg config)" />
+    <param name="model" value="$(arg model)" />
+    <param name="visualization" value="$(arg visualization)" />
+  </node>
+</launch>
