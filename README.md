@@ -1,6 +1,6 @@
 # Detectron2 Object Detector for ROS
 
-Note: This repository is an adaptation [Detectron2_ros](from https://github.com/DavidFernandezChaves/Detectron2_ros) to include panoptic segmentation.
+Note: This repository is an adaptation of [Detectron2_ros](https://github.com/DavidFernandezChaves/Detectron2_ros) to include panoptic segmentation.
 
 A ROS Node for detecting objects using [Detectron2](https://github.com/facebookresearch/detectron2).
 
